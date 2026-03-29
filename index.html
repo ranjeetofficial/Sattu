@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,26 +8,43 @@
   <meta name="description" content="A gentle, no‑pressure note of apology and gratitude." />
   <style>
     :root {
-      --bg: #0f172a;           /* slate-900 */
-      --card: #111827;        /* gray-900 */
-      --soft: #1f2937;        /* gray-800 */
-      --text: #e5e7eb;        /* gray-200 */
-      --muted: #94a3b8;       /* slate-400 */
-      --accent: #f472b6;      /* pink-400 */
-      --accent-2: #60a5fa;    /* blue-400 */
-      --ok: #34d399;          /* emerald-400 */
-      --warn: #fbbf24;        /* amber-300 */
+      --bg: #0f172a;
+      /* slate-900 */
+      --card: #111827;
+      /* gray-900 */
+      --soft: #1f2937;
+      /* gray-800 */
+      --text: #e5e7eb;
+      /* gray-200 */
+      --muted: #94a3b8;
+      /* slate-400 */
+      --accent: #f472b6;
+      /* pink-400 */
+      --accent-2: #60a5fa;
+      /* blue-400 */
+      --ok: #34d399;
+      /* emerald-400 */
+      --warn: #fbbf24;
+      /* amber-300 */
       --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
     body {
-      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 80% -10%, rgba(96,165,250,.08), transparent 60%),
-                  radial-gradient(1000px 700px at -10% 110%, rgba(244,114,182,.08), transparent 60%),
-                  var(--bg);
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(96, 165, 250, .08), transparent 60%),
+        radial-gradient(1000px 700px at -10% 110%, rgba(244, 114, 182, .08), transparent 60%),
+        var(--bg);
       color: var(--text);
       line-height: 1.6;
       display: grid;
@@ -41,8 +59,8 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, rgba(96,165,250,.12), rgba(244,114,182,.12));
-      border: 1px solid rgba(148,163,184,.25);
+      background: linear-gradient(135deg, rgba(96, 165, 250, .12), rgba(244, 114, 182, .12));
+      border: 1px solid rgba(148, 163, 184, .25);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 28px 24px;
@@ -57,95 +75,201 @@
     }
 
     .chip {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 8px 12px; border-radius: 999px;
-      background: rgba(15,23,42,.6);
-      border: 1px solid rgba(148,163,184,.25);
-      color: var(--muted); font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, .6);
+      border: 1px solid rgba(148, 163, 184, .25);
+      color: var(--muted);
+      font-size: 14px;
     }
-    .chip svg { opacity: .9 }
+
+    .chip svg {
+      opacity: .9
+    }
 
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
-      border: 1px solid rgba(148,163,184,.18);
+      background: linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .01));
+      border: 1px solid rgba(148, 163, 184, .18);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 20px;
     }
 
-    h2 { font-size: clamp(18px, 3vw, 22px); margin: 0 0 8px; }
-    p { margin: 8px 0; }
+    h2 {
+      font-size: clamp(18px, 3vw, 22px);
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
 
     .two {
-      display: grid; gap: 18px; grid-template-columns: 1fr; 
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
     }
+
     @media (min-width: 800px) {
-      .two { grid-template-columns: 1fr 1fr; }
+      .two {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     .list {
-      display: grid; gap: 10px; margin: 12px 0;
+      display: grid;
+      gap: 10px;
+      margin: 12px 0;
     }
-    .item { display: grid; grid-template-columns: 26px 1fr; align-items: start; gap: 10px; }
 
-    .btnbar { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    .item {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      align-items: start;
+      gap: 10px;
+    }
+
+    .btnbar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
     .btn {
-      padding: 10px 14px; border-radius: 12px; border: 1px solid rgba(148,163,184,.26);
-      background: rgba(2,6,23,.5); color: var(--text); text-decoration: none; font-weight: 600; font-size: 14px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(148, 163, 184, .26);
+      background: rgba(2, 6, 23, .5);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
       transition: transform .12s ease, background .2s ease, border-color .2s ease;
     }
-    .btn:hover { transform: translateY(-1px); background: rgba(2,6,23,.7); border-color: rgba(148,163,184,.5); }
 
-    .primary { background: linear-gradient(90deg, rgba(96,165,250,.2), rgba(244,114,182,.2)); }
+    .btn:hover {
+      transform: translateY(-1px);
+      background: rgba(2, 6, 23, .7);
+      border-color: rgba(148, 163, 184, .5);
+    }
 
-    .muted { color: var(--muted); font-size: 14px; }
+    .primary {
+      background: linear-gradient(90deg, rgba(96, 165, 250, .2), rgba(244, 114, 182, .2));
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
 
     .footer {
-      text-align: center; color: var(--muted); font-size: 12px; margin-top: 6px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
     }
 
     .heart {
-      width: 22px; height: 22px; fill: url(#grad);
-      filter: drop-shadow(0 2px 8px rgba(244,114,182,.35));
+      width: 22px;
+      height: 22px;
+      fill: url(#grad);
+      filter: drop-shadow(0 2px 8px rgba(244, 114, 182, .35));
     }
 
     /* small flourish */
     .fade {
       animation: fadeIn .8s ease 1 both;
     }
-    @keyframes fadeIn { from { opacity: 0; translate: 0 8px } to { opacity: 1; translate: 0 0 } }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        translate: 0 8px
+      }
+
+      to {
+        opacity: 1;
+        translate: 0 0
+      }
+    }
 
     /* letter styling */
     .letter {
-      background: linear-gradient(180deg, rgba(17,24,39,.7), rgba(17,24,39,.5));
-      border: 1px dashed rgba(148,163,184,.4);
-      border-radius: 14px; padding: 18px; font-size: 16px;
+      background: linear-gradient(180deg, rgba(17, 24, 39, .7), rgba(17, 24, 39, .5));
+      border: 1px dashed rgba(148, 163, 184, .4);
+      border-radius: 14px;
+      padding: 18px;
+      font-size: 16px;
     }
 
     .ack {
-      display: grid; gap: 8px; margin-top: 12px; font-size: 14px;
+      display: grid;
+      gap: 8px;
+      margin-top: 12px;
+      font-size: 14px;
     }
-    .ack button {
-      background: rgba(15,23,42,.6); color: var(--text); border: 1px solid rgba(148,163,184,.35);
-      border-radius: 10px; padding: 10px 12px; cursor: pointer; font-weight: 600;
-    }
-    .ack button:hover { background: rgba(15,23,42,.8) }
 
-    .success { color: var(--ok); font-weight: 700; display: none; }
+    .ack button {
+      background: rgba(15, 23, 42, .6);
+      color: var(--text);
+      border: 1px solid rgba(148, 163, 184, .35);
+      border-radius: 10px;
+      padding: 10px 12px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .ack button:hover {
+      background: rgba(15, 23, 42, .8)
+    }
+
+    .success {
+      color: var(--ok);
+      font-weight: 700;
+      display: none;
+    }
 
     /* tiny details section */
     .details {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; font-size: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 14px;
     }
-    .tag { background: rgba(2,6,23,.55); border: 1px solid rgba(148,163,184,.25); border-radius: 10px; padding: 8px 10px; text-align: center; color: var(--muted); }
 
-    textarea, input[type="text"] {
-      width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid rgba(148,163,184,.35);
-      background: rgba(2,6,23,.45); color: var(--text); resize: vertical; min-height: 90px;
+    .tag {
+      background: rgba(2, 6, 23, .55);
+      border: 1px solid rgba(148, 163, 184, .25);
+      border-radius: 10px;
+      padding: 8px 10px;
+      text-align: center;
+      color: var(--muted);
     }
-    label { font-size: 14px; color: var(--muted); }
+
+    textarea,
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, .35);
+      background: rgba(2, 6, 23, .45);
+      color: var(--text);
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    label {
+      font-size: 14px;
+      color: var(--muted);
+    }
   </style>
 </head>
+
 <body>
   <main class="container">
     <section class="hero fade">
@@ -153,16 +277,17 @@
         <svg class="heart" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <defs>
             <linearGradient id="grad" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0%" stop-color="#f472b6"/>
-              <stop offset="100%" stop-color="#60a5fa"/>
+              <stop offset="0%" stop-color="#f472b6" />
+              <stop offset="100%" stop-color="#60a5fa" />
             </linearGradient>
           </defs>
-          <path d="M12 21s-1-.45-1-1.5S8 17 6 15 2 11 4 7s6-3 8 1c2-4 6-4 8-1s0 8-2 10-5 3.5-5 4.5-1 1.5-1 1.5z"/>
+          <path d="M12 21s-1-.45-1-1.5S8 17 6 15 2 11 4 7s6-3 8 1c2-4 6-4 8-1s0 8-2 10-5 3.5-5 4.5-1 1.5-1 1.5z" />
         </svg>
         A small note with respect
       </span>
       <h1>Hey <span style="color:var(--accent)">Sattu 🌸 The Pure Soul </span>, I'm genuinely sorry.</h1>
-      <p class="muted">This page is just to say sorry, clearly and calmly. No pressure. Please read only if you feel comfortable.</p>
+      <p class="muted">This page is just to say sorry, clearly and calmly. No pressure. Please read only if you feel
+        comfortable.</p>
       <div class="details">
         <div class="tag">From: Pintu (Ranjeet)</div>
         <div class="tag">Date: <span id="today"></span></div>
@@ -172,14 +297,20 @@
     <section class="card fade" style="animation-delay:.06s">
       <h2>Mera seedha, simple sorry</h2>
       <div class="letter">
-        <p>Jab hum chhindwara me mile (ya bas saamne se guzre), main awkward ho gaya tha. Family bhi wahin thi aur maine pehle kabhi-kabhi aapko irritate kiya tha — uske liye <strong>sorry</strong>. Tumne Jo boundaries banayi hain; main unhe respect karta hoon.</p>
-        <p>Truth: Mere feelings one-sided hain, aur main samajhta hoon ki aap mujhe family relative ki tarah hi dekhti ho. Yeh page sirf clarity ke liye hai — pressure ke liye nahi.</p>
-        <p>Aage se, main bas itna promise karta hoon ki: main respectful rahunga, space dunga, aur aapko kabhi uncomfortable feel nahi karne dunga.</p>
+        <p>Jab hum chhindwara me mile (ya bas saamne se guzre), main awkward ho gaya tha. Family bhi wahin thi aur maine
+          pehle kabhi-kabhi aapko irritate kiya tha — uske liye <strong>sorry</strong>. Tumne Jo boundaries banayi hain;
+          main unhe respect karta hoon.</p>
+        <p>Truth: Mere feelings one-sided hain, aur main samajhta hoon ki aap mujhe family relative ki tarah hi dekhti
+          ho. Yeh page sirf clarity ke liye hai — pressure ke liye nahi.</p>
+        <p>Aage se, main bas itna promise karta hoon ki: main respectful rahunga, space dunga, aur aapko kabhi
+          uncomfortable feel nahi karne dunga.</p>
       </div>
       <div class="list">
-        <div class="item"><span>✅</span><span>Respect first: aapki boundaries, choices aur comfort sabse pehle.</span></div>
+        <div class="item"><span>✅</span><span>Respect first: aapki boundaries, choices aur comfort sabse pehle.</span>
+        </div>
         <div class="item"><span>✅</span><span>No spam: unnecessary calls, messages ya repeated pings nahi.</span></div>
-        <div class="item"><span>✅</span><span>Space: Agar aap kabhi baat nahi karna chahein, that’s okay. Main samajhunga.</span></div>
+        <div class="item"><span>✅</span><span>Space: Agar aap kabhi baat nahi karna chahein, that’s okay. Main
+            samajhunga.</span></div>
       </div>
       <p class="muted">PG: I know Yesterday, My Intention was not to hurt you anymore.</p>
     </section>
@@ -187,13 +318,14 @@
     <section class="two">
       <div class="card fade" style="animation-delay:.1s">
         <h2>Completely Understands Your Situation</h2>
-          <div class="list">
+        <div class="list">
           <div class="item"><span>💍</span><span>Tumhari Shaadi hone wali hain(Coming Year) </span></div>
           <div class="item"><span>🔮</span><span>Focusing on your carrer</span></div>
         </div>
         <div class="ack">
           <button onclick="ack()">I understood </button>
-          <span id="ack-done" class="success">Thanks for reading. Wishing you peace and happiness. 🌸 The Pure Soul</span>
+          <span id="ack-done" class="success">Thanks for reading. Wishing you peace and happiness. 🌸 The Pure
+            Soul</span>
         </div>
 
       </div>
@@ -203,7 +335,8 @@
         <div class="list">
           <div class="item"><span>🌱</span><span>Attachment ke saath maturity bhi zaroori hoti hai.</span></div>
           <div class="item"><span>🤝</span><span>Respect & trust bina dikhaye pyaar ki value nahi banti.</span></div>
-          <div class="item"><span>🧭</span><span>Har relation ka apna context hota hai — aur uski maryada rakhi jaani chahiye.</span></div>
+          <div class="item"><span>🧭</span><span>Har relation ka apna context hota hai — aur uski maryada rakhi jaani
+              chahiye.</span></div>
         </div>
         <div class="ack">
           <button onclick="ack()">I understood</button>
@@ -214,56 +347,58 @@
 
     <section class="card fade" style="animation-delay:.18s">
       <h2>Clear boundaries</h2>
-      <p class="muted">Main aapse koi return expect nahi karta. Agar kabhi future me casually hi ‘hi’ kehna ho, great; warna, is page ko bas ek respectful closure ki tarah samajhna.</p>
+      <p class="muted">Main aapse koi return expect nahi karta. Agar kabhi future me casually hi ‘hi’ kehna ho, great;
+        warna, is page ko bas ek respectful closure ki tarah samajhna.</p>
       <div class="btnbar">
         <a class="btn" href="#" onclick="toggleHindi(event)">Switch: Hinglish ↔︎ English</a>
         <a class="btn" href="#" onclick="copyLink(event)">Copy page link</a>
       </div>
     </section>
 
-    <p class="footer">© <span id="year"></span> RJ • This page is meant to be gentle and private. If this made you uncomfortable, I’m sorry Sattu — you can close it anytime.</p>
+    <p class="footer">© <span id="year"></span> RJ • This page is meant to be gentle and private. If this made you
+      uncomfortable, I’m sorry Sattu — you can close it anytime.</p>
   </main>
 
   <script>
     // date stamps
     const d = new Date();
-    document.getElementById('today').textContent = d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' });
+    document.getElementById('today').textContent = d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
     document.getElementById('year').textContent = d.getFullYear();
 
     // local-only feedback helpers
-    function saveLocal(){
-      try{
+    function saveLocal() {
+      try {
         const val = document.getElementById('msg').value || '';
         localStorage.setItem('sattu_feedback', val);
         alert('Saved on this device only.');
-      }catch(e){ alert('Could not save locally on this browser.'); }
+      } catch (e) { alert('Could not save locally on this browser.'); }
     }
-    function clearLocal(){
-      try{ localStorage.removeItem('sattu_feedback'); document.getElementById('msg').value=''; }catch(e){}
+    function clearLocal() {
+      try { localStorage.removeItem('sattu_feedback'); document.getElementById('msg').value = ''; } catch (e) { }
     }
-    (function loadSaved(){
-      try{
+    (function loadSaved() {
+      try {
         const v = localStorage.getItem('sattu_feedback');
-        if(v) document.getElementById('msg').value = v;
-      }catch(e){}
+        if (v) document.getElementById('msg').value = v;
+      } catch (e) { }
     })();
 
-    function ack(){
+    function ack() {
       const el = document.getElementById('ack-done');
       el.style.display = 'inline';
-      setTimeout(()=>{ el.style.opacity = .85; }, 50);
+      setTimeout(() => { el.style.opacity = .85; }, 50);
     }
 
-    function copyLink(e){
+    function copyLink(e) {
       e.preventDefault();
-      navigator.clipboard?.writeText(location.href).then(()=>{
+      navigator.clipboard?.writeText(location.href).then(() => {
         alert('Link copied. Share only if you want to.');
-      }).catch(()=>alert('Copy not allowed by browser.'));
+      }).catch(() => alert('Copy not allowed by browser.'));
     }
 
     // Simple language toggle (Hinglish/English)
     let english = false;
-    function toggleHindi(e){
+    function toggleHindi(e) {
       e.preventDefault();
       english = !english;
       const h2s = document.querySelectorAll('h2');
@@ -271,7 +406,7 @@
       const bullets = document.querySelectorAll('.list .item span:nth-child(2)');
       const heroMuted = document.querySelector('.hero .muted');
 
-      if(english){
+      if (english) {
         document.querySelector('.hero h1').innerHTML = 'Hey <span style="color:var(--accent)">Sattu</span>, I am genuinely sorry.';
         heroMuted.textContent = 'This page is only to say sorry—calmly and clearly. No pressure at all.';
         h2s[0].textContent = 'My simple, straight sorry';
@@ -301,4 +436,5 @@
     }
   </script>
 </body>
+
 </html>
